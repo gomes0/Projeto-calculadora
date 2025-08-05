@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             lblnumero = new Label();
-            txtnumero1 = new TextBox();
+            txtNumero1 = new TextBox();
             lblnumero2 = new Label();
-            txtnumero2 = new TextBox();
-            btnsomar = new Button();
-            btnsubtrair = new Button();
-            btnmultiplicar = new Button();
-            btndividir = new Button();
-            lbltotal = new Label();
+            txtNumero2 = new TextBox();
+            btnSomar = new Button();
+            btnSubtrair = new Button();
+            btnMultiplicar = new Button();
+            btnDividir = new Button();
+            lblResultado = new Label();
             SuspendLayout();
             // 
             // lblnumero
@@ -48,13 +48,13 @@
             lblnumero.TabIndex = 0;
             lblnumero.Text = "Número 1";
             // 
-            // txtnumero1
+            // txtNumero1
             // 
-            txtnumero1.Font = new Font("Segoe UI", 12F);
-            txtnumero1.Location = new Point(12, 27);
-            txtnumero1.Name = "txtnumero1";
-            txtnumero1.Size = new Size(100, 29);
-            txtnumero1.TabIndex = 1;
+            txtNumero1.Font = new Font("Segoe UI", 12F);
+            txtNumero1.Location = new Point(12, 27);
+            txtNumero1.Name = "txtNumero1";
+            txtNumero1.Size = new Size(100, 29);
+            txtNumero1.TabIndex = 1;
             // 
             // lblnumero2
             // 
@@ -65,74 +65,75 @@
             lblnumero2.TabIndex = 2;
             lblnumero2.Text = "Número 2";
             // 
-            // txtnumero2
+            // txtNumero2
             // 
-            txtnumero2.Font = new Font("Segoe UI", 12F);
-            txtnumero2.Location = new Point(138, 27);
-            txtnumero2.Name = "txtnumero2";
-            txtnumero2.Size = new Size(100, 29);
-            txtnumero2.TabIndex = 3;
+            txtNumero2.Font = new Font("Segoe UI", 12F);
+            txtNumero2.Location = new Point(138, 27);
+            txtNumero2.Name = "txtNumero2";
+            txtNumero2.Size = new Size(100, 29);
+            txtNumero2.TabIndex = 3;
             // 
-            // btnsomar
+            // btnSomar
             // 
-            btnsomar.Location = new Point(13, 71);
-            btnsomar.Name = "btnsomar";
-            btnsomar.Size = new Size(75, 23);
-            btnsomar.TabIndex = 4;
-            btnsomar.Text = "Somar";
-            btnsomar.UseVisualStyleBackColor = true;
+            btnSomar.Location = new Point(13, 71);
+            btnSomar.Name = "btnSomar";
+            btnSomar.Size = new Size(75, 23);
+            btnSomar.TabIndex = 4;
+            btnSomar.Text = "Somar";
+            btnSomar.UseVisualStyleBackColor = true;
+            btnSomar.Click += btnSomar_Click;
             // 
-            // btnsubtrair
+            // btnSubtrair
             // 
-            btnsubtrair.Location = new Point(94, 71);
-            btnsubtrair.Name = "btnsubtrair";
-            btnsubtrair.Size = new Size(75, 23);
-            btnsubtrair.TabIndex = 5;
-            btnsubtrair.Text = "Subtrair";
-            btnsubtrair.UseVisualStyleBackColor = true;
+            btnSubtrair.Location = new Point(94, 71);
+            btnSubtrair.Name = "btnSubtrair";
+            btnSubtrair.Size = new Size(75, 23);
+            btnSubtrair.TabIndex = 5;
+            btnSubtrair.Text = "Subtrair";
+            btnSubtrair.UseVisualStyleBackColor = true;
             // 
-            // btnmultiplicar
+            // btnMultiplicar
             // 
-            btnmultiplicar.Location = new Point(175, 71);
-            btnmultiplicar.Name = "btnmultiplicar";
-            btnmultiplicar.Size = new Size(75, 23);
-            btnmultiplicar.TabIndex = 6;
-            btnmultiplicar.Text = "Multiplicar";
-            btnmultiplicar.UseVisualStyleBackColor = true;
+            btnMultiplicar.Location = new Point(175, 71);
+            btnMultiplicar.Name = "btnMultiplicar";
+            btnMultiplicar.Size = new Size(75, 23);
+            btnMultiplicar.TabIndex = 6;
+            btnMultiplicar.Text = "Multiplicar";
+            btnMultiplicar.UseVisualStyleBackColor = true;
             // 
-            // btndividir
+            // btnDividir
             // 
-            btndividir.Location = new Point(256, 71);
-            btndividir.Name = "btndividir";
-            btndividir.Size = new Size(75, 23);
-            btndividir.TabIndex = 7;
-            btndividir.Text = "Dividir";
-            btndividir.UseVisualStyleBackColor = true;
+            btnDividir.Location = new Point(256, 71);
+            btnDividir.Name = "btnDividir";
+            btnDividir.Size = new Size(75, 23);
+            btnDividir.TabIndex = 7;
+            btnDividir.Text = "Dividir";
+            btnDividir.UseVisualStyleBackColor = true;
             // 
-            // lbltotal
+            // lblResultado
             // 
-            lbltotal.AutoSize = true;
-            lbltotal.Font = new Font("SimSun", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbltotal.Location = new Point(283, 28);
-            lbltotal.Name = "lbltotal";
-            lbltotal.Size = new Size(23, 24);
-            lbltotal.TabIndex = 8;
-            lbltotal.Text = "0";
-            lbltotal.Click += lbltotal_Click;
+            lblResultado.AutoSize = true;
+            lblResultado.Font = new Font("SimSun", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblResultado.Location = new Point(283, 28);
+            lblResultado.Name = "lblResultado";
+            lblResultado.Size = new Size(23, 24);
+            lblResultado.TabIndex = 8;
+            lblResultado.Text = "0";
+            lblResultado.Click += lbltotal_Click;
             // 
             // Calculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(347, 103);
-            Controls.Add(lbltotal);
-            Controls.Add(btndividir);
-            Controls.Add(btnmultiplicar);
-            Controls.Add(btnsubtrair);
-            Controls.Add(btnsomar);
-            Controls.Add(txtnumero2);
+            Controls.Add(lblResultado);
+            Controls.Add(btnDividir);
+            Controls.Add(btnMultiplicar);
+            Controls.Add(btnSubtrair);
+            Controls.Add(btnSomar);
+            Controls.Add(txtNumero2);
             Controls.Add(lblnumero2);
-            Controls.Add(txtnumero1);
+            Controls.Add(txtNumero1);
             Controls.Add(lblnumero);
             Name = "Calculadora";
             Text = "Calculadora";
@@ -143,13 +144,13 @@
         #endregion
 
         private Label lblnumero;
-        private TextBox txtnumero1;
+        private TextBox txtNumero1;
         private Label lblnumero2;
-        private TextBox txtnumero2;
-        private Button btnsomar;
-        private Button btnsubtrair;
-        private Button btnmultiplicar;
-        private Button btndividir;
-        private Label lbltotal;
+        private TextBox txtNumero2;
+        private Button btnSomar;
+        private Button btnSubtrair;
+        private Button btnMultiplicar;
+        private Button btnDividir;
+        private Label lblResultado;
     }
 }
