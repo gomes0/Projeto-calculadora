@@ -91,6 +91,7 @@
             btnSubtrair.TabIndex = 5;
             btnSubtrair.Text = "Subtrair";
             btnSubtrair.UseVisualStyleBackColor = true;
+            btnSubtrair.Click += btnSubtrair_Click;
             // 
             // btnMultiplicar
             // 
@@ -100,6 +101,7 @@
             btnMultiplicar.TabIndex = 6;
             btnMultiplicar.Text = "Multiplicar";
             btnMultiplicar.UseVisualStyleBackColor = true;
+            btnMultiplicar.Click += btnMultiplicar_Click;
             // 
             // btnDividir
             // 
@@ -109,6 +111,7 @@
             btnDividir.TabIndex = 7;
             btnDividir.Text = "Dividir";
             btnDividir.UseVisualStyleBackColor = true;
+            btnDividir.Click += btnDividir_Click;
             // 
             // lblResultado
             // 
@@ -125,7 +128,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(347, 103);
+            ClientSize = new Size(449, 103);
             Controls.Add(lblResultado);
             Controls.Add(btnDividir);
             Controls.Add(btnMultiplicar);
